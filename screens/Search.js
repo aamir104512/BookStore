@@ -1,8 +1,8 @@
+import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {View, Text} from 'react-native';
 import {icons, COLORS, images, SIZES, FONTS} from '../constants';
 
-const HomeScreen = () => {
+export default function Search() {
   return (
     <View
       style={{
@@ -11,9 +11,9 @@ const HomeScreen = () => {
         justifyContent: 'center',
         backgroundColor: COLORS.black,
       }}>
-      <Text style={{fontSize: 40, color: 'white'}}>This is HomeScreen</Text>
+      <Text style={{fontSize: 40, color: 'white'}}>This is Search</Text>
     </View>
   );
-};
+}
 
-export default HomeScreen;
+const styles = StyleSheet.create({});

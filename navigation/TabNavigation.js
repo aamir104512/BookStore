@@ -2,6 +2,9 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/HomeScreen';
 import {icons, COLORS} from '../constants';
 import {View, Image} from 'react-native';
+import Notifications from '../screens/Notifications';
+import Search from '../screens/Search';
+import SideMenu from '../screens/SideMenu';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,7 +18,7 @@ const TabNavigation = () => {
           height: '10%',
           justifyContent: 'center',
           borderTopWidth: 0,
-          shadowColor: COLORS.black
+          shadowColor: COLORS.black,
         },
         headerShown: false,
         tabBarShowLabel: false,
@@ -47,7 +50,7 @@ const TabNavigation = () => {
       {/* search screen */}
       <Tab.Screen
         name="Search"
-        component={HomeScreen}
+        component={Search}
         options={{
           showIcon: true,
           tabBarIcon: ({focused}) => {
@@ -71,7 +74,7 @@ const TabNavigation = () => {
       {/* notification screen */}
       <Tab.Screen
         name="Notification"
-        component={HomeScreen}
+        component={Notifications}
         options={{
           showIcon: true,
           tabBarIcon: ({focused}) => {
@@ -95,7 +98,7 @@ const TabNavigation = () => {
       {/* menu screen */}
       <Tab.Screen
         name="Menu"
-        component={HomeScreen}
+        component={SideMenu}
         options={{
           showIcon: true,
           tabBarIcon: ({focused}) => {
