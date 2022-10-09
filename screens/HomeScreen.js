@@ -11,7 +11,7 @@ const HomeScreen = () => {
         justifyContent: 'center',
         backgroundColor: COLORS.black,
       }}>
-      <Text style={{fontSize: 40, color: 'white'}}>This is HomeScreen</Text>
+      <Text style={{fontSize: 40, color: 'white'}}>This is Home Screen</Text>
     </View>
   );
 };
