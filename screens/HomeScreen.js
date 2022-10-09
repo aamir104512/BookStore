@@ -7,15 +7,16 @@ const headerData = {
   points: 240,
 };
 
+
+
 const HomeScreen = () => {
   const [header, setHeader] = useState(headerData);
 
-  return (
-    // Greetings, Username and Points Section
 
-    // main view
-    <View style={{flex: 1, backgroundColor: COLORS.black}}>
-      <View style={{paddingHorizontal: SIZES.padding, flex: 1}}>
+  // function for profile (name, greetings and points)
+  function profile(header) {
+    return (
+      <View style={{paddingHorizontal: SIZES.padding, flex: 0.1}}>
         {/* Greetings */}
         <Text style={{...FONTS.h3, color: COLORS.white, marginTop: 20}}>
           Good Morning
@@ -30,18 +31,32 @@ const HomeScreen = () => {
           <Text style={{...FONTS.h2, color: COLORS.white, fontWeight: 'bold'}}>
             {header.username}
           </Text>
-
+  
           <TouchableOpacity
             style={{
               backgroundColor: COLORS.primary,
               height: 40,
-              width: 110,
               paddingLeft: 3,
               paddingRight: SIZES.radius,
               borderRadius: 20,
-            }}>
-            <View style={{flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
-              <View style={{width: 30, height: 30, justifyContent: 'center', backgroundColor: 'rgba(0, 0, 0, 0.3)', alignItems: 'center', borderRadius: 25}}>
+            }}
+            onPress={() => console.log('Points')}>
+            <View
+              style={{
+                flex: 1,
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}>
+              <View
+                style={{
+                  width: 30,
+                  height: 30,
+                  justifyContent: 'center',
+                  backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                  alignItems: 'center',
+                  borderRadius: 25,
+                }}>
                 <Image
                   source={icons.cut_icon}
                   resizeMode="contain"
@@ -53,9 +68,39 @@ const HomeScreen = () => {
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    );
+  }
 
-    // Claim, Get Point, My Card Section
+  // function for buttons (claim, get point, my card)
+
+  function buttons(){
+    return(
+      <View style={{paddingHorizontal: SIZES.padding, marginTop: 50}}>
+        <View style={{flexDirection: 'row', backgroundColor: COLORS.secondary, height: 70, borderRadius: SIZES.radius, alignItems: 'center', justifyContent: 'center'}}>
+          <TouchableOpacity>
+          <Image 
+          source={icons.claim_icon}
+          resizeMode= "contain"
+          style={{height: 30, width: 30}}
+          />
+          </TouchableOpacity>
+          
+        </View>
+      </View>
+    )
+  }
+
+
+  return (
+    // Greetings, Username and Points Section
+
+    // main view
+    <View style={{flex: 1, backgroundColor: COLORS.black}}>
+      {profile(header)}
+      {/* Claim, Get Point, My Card Section */}
+
+      {buttons()}
+    </View>
 
     // My Book Section
 
