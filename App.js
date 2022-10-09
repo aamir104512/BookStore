@@ -1,11 +1,21 @@
 import React from "react";
 import {View, Text} from 'react-native';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import BookDetails from "./screens/BookDetails";
+import TabNavigation from "./navigation/TabNavigation";
+import { NavigationContainer } from "@react-navigation/native";
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return(
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text style={{fontSize: 40, color: 'white'}}>Hello Aamir</Text>
-    </View>
+  <NavigationContainer>
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="Home Screen" component={TabNavigation} />
+      <Stack.Screen name="Details" component={BookDetails} />
+    </Stack.Navigator>
+  </NavigationContainer>
+    
   )
 }
 
