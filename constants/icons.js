@@ -12,6 +12,7 @@ export const plus_icon = require('../assets/icons/plus_icon.png');
 export const point_icon = require('../assets/icons/point_icon.png');
 export const read_icon = require('../assets/icons/read_icon.png');
 export const search_icon = require('../assets/icons/search_icon.png');
+export const cut_icon = require('../assets/icons/cut_icon.png');
 
 export default {
   backArrow,
@@ -28,4 +29,5 @@ export default {
   point_icon,
   read_icon,
   search_icon,
+  cut_icon
 };

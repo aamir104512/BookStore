@@ -43,7 +43,7 @@ const HomeScreen = () => {
             <View style={{flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
               <View style={{width: 30, height: 30, justifyContent: 'center', backgroundColor: 'rgba(0, 0, 0, 0.3)', alignItems: 'center', borderRadius: 25}}>
                 <Image
-                  source={icons.plus_icon}
+                  source={icons.cut_icon}
                   resizeMode="contain"
                   style={{width: 20, height: 20}}
                 />
