@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {View, Text, Image, TouchableOpacity, FlatList} from 'react-native';
 import {icons, COLORS, images, SIZES, FONTS} from '../constants';
 
 const LineDivider = () => {
@@ -22,7 +22,7 @@ const headerData = {
   points: 240,
 };
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
 
   const bookOtherWordsForHome = {
     id: 1,
@@ -75,8 +75,56 @@ const bookTheTinyDragon = {
     navTintColor: "#FFF"
 }
 
+const booksData = [
+  {
+    ...bookOtherWordsForHome,
+    completion: '75%',
+    lastRead: '3d 5h'
+
+  },
+  {
+    ...bookTheMetropolis,
+    completion: '23%',
+    lastRead: '10d 5h',
+
+  },
+  {
+    ...bookTheTinyDragon,
+    completion: '48%',
+    lastRead: '1d 2h'
+  }
+
+]
+
+const booksCategories = [
+  {
+    id: 1,
+    categoryName: 'Best Seller',
+    books: [
+      bookOtherWordsForHome, bookTheMetropolis, bookTheTinyDragon
+    ]
+  },
+  {
+    id: 2,
+    categoryName: 'The Latest',
+    books: [
+       bookTheTinyDragon
+    ]
+  },
+  {
+    id: 3,
+    categoryName: 'Coming Soon',
+    books: [
+       bookTheMetropolis, bookTheTinyDragon
+    ]
+  },
+
+]
+
 
   const [header, setHeader] = useState(headerData);
+  const [myBooks, setMyBooks] = useState(booksData);
+  const [categories, setCategories] = (booksCategories);
 
   // function for profile (name, greetings and points)
   function profile(header) {
@@ -222,6 +270,21 @@ const bookTheTinyDragon = {
 
   // My Books section function
   function books() {
+
+    const renderItem = ({item, index}) => {
+      return(
+        <TouchableOpacity 
+        style={{flex: 1, marginLeft: index == 0 ? SIZES.padding : 0, marginRight: SIZES.radius, marginTop: 20}}
+        onPress = {()=> navigation.navigate("Details")}>
+
+          <Image 
+          source={item.bookCover}
+          resizeMode= {"contain"}
+          style={{width: 180, height: 250, borderRadius: 20}}
+          />
+        </TouchableOpacity>
+      )
+    }
     return(
       <View style={{paddingHorizontal: SIZES.padding}}>
         <View style={{marginTop: 50, flexDirection: 'row', justifyContent: 'space-between'}}>
@@ -231,6 +294,16 @@ const bookTheTinyDragon = {
           onPress={() => console.log("see more")}>
             <Text style={{...FONTS.body3, color: COLORS.lightGray, textDecorationLine: 'underline'}}>see more</Text>
           </TouchableOpacity> 
+        </View>
+
+        <View>
+          <FlatList 
+          data={myBooks}
+          renderItem = {renderItem}
+          keyExtractor = {item => `${item.id}`}
+          horizontal
+          showsHorizontalScrollIndicator = {false}
+          />
         </View>
       </View>
     )
