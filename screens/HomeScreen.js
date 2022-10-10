@@ -274,14 +274,47 @@ const booksCategories = [
     const renderItem = ({item, index}) => {
       return(
         <TouchableOpacity 
-        style={{flex: 1, marginLeft: index == 0 ? SIZES.padding : 0, marginRight: SIZES.radius, marginTop: 20}}
-        onPress = {()=> navigation.navigate("Details")}>
+        style={{
+          flex: 1, 
+          marginLeft: index == 0 ? SIZES.padding : 0, 
+          marginRight: SIZES.radius, 
+          marginTop: 20}}
+        onPress = {()=> navigation.navigate("Details", {detailsData: item})}>
 
+          {/* book images */}
           <Image 
           source={item.bookCover}
           resizeMode= {"contain"}
           style={{width: 180, height: 250, borderRadius: 20}}
           />
+
+          {/* book information section */}
+          <View style={{marginTop: SIZES.radius, alignItems: 'center', flexDirection: 'row'}}>
+            <Image 
+            source={icons.clock_icon}
+            resizeMode={'contain'}
+            style={{
+              width: 13,
+              height: 13,
+              tintColor: COLORS.lightGray
+            }}
+            />
+            <Text style={{fontSize: 13, marginLeft: 5, color: COLORS.lightGray}}>{item.lastRead}</Text>
+
+            <Image 
+            source={icons.page_icon}
+            resizeMode={'contain'}
+            style={{
+              width: 13,
+              height: 13,
+              tintColor: COLORS.lightGray,
+              marginLeft: SIZES.radius
+            }}
+            />
+            <Text style={{fontSize: 13, marginLeft: 5, color: COLORS.lightGray}}>{item.completion}</Text>
+
+          </View>
+
         </TouchableOpacity>
       )
     }
