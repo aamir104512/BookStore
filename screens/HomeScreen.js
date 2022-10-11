@@ -31,7 +31,7 @@ const HomeScreen = ({navigation}) => {
     bookCover: images.other_words_for_home,
     rating: 4.5,
     language: "Eng",
-    pageNo: "341p",
+    pageNo: "341",
     author: "Jasmine Warga",
     genre: [
         "Romance", "Adventure",
@@ -48,7 +48,7 @@ const bookTheMetropolis = {
     bookCover: images.the_metropolist,
     rating: 4.1,
     language: "Eng",
-    pageNo: "272p",
+    pageNo: "272",
     author: "Seith Fried",
     genre: [
         "Romance", "Drama"
@@ -65,7 +65,7 @@ const bookTheTinyDragon = {
     bookCover: images.the_tiny_dragon,
     rating: 3.5,
     language: "Eng",
-    pageNo: "160p",
+    pageNo: "160",
     author: "Rupert Carter",
     genre: [
         "Drama", "Adventure", "Romance"

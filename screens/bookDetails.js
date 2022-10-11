@@ -4,7 +4,7 @@ import {icons, COLORS, images, SIZES, FONTS} from '../constants';
 
 const LineDivider = () => {
   return (
-      <View style={{ width: 1, paddingVertical: 8 }}>
+      <View style={{ width: 1, height: 33 }}>
           <View style={{ flex: 1, borderLeftColor: COLORS.lightGray2, borderLeftWidth: 1 }}></View>
       </View>
   )
@@ -27,7 +27,7 @@ const BookDetails = ({route, navigation}) => {
           top: 0,
           right: 0,
           bottom: 0,
-          left: 0
+          left: 0,
         }}
         />
 
@@ -58,7 +58,7 @@ const BookDetails = ({route, navigation}) => {
             />
           </TouchableOpacity>
 
-          <Text style={{...FONTS.h3, color: detailsData.navTintColor}}>Details Book</Text>
+          <Text style={{...FONTS.h3, color: detailsData.navTintColor, fontWeight: 'bold'}}>Details Book</Text>
 
           <TouchableOpacity onPress={()=> console.log("More Pressed")}>
             <Image 
@@ -94,23 +94,40 @@ const BookDetails = ({route, navigation}) => {
 
         {/* Book Information section (rating, no of pages, language) */}
         <View style={{
-          height: 50, 
+          height: 80, 
           backgroundColor: "rgba(0,0,0,0.4)", 
           marginHorizontal: SIZES.padding, 
-          marginTop: 25, 
+          marginTop: 23, 
           borderRadius: 10,
           alignItems: 'center',
-          justifyContent: 'center',
-          flexDirection: 'row'
+          justifyContent: 'space-evenly',
+          flexDirection: 'row',
+          // paddingHorizontal: 10
+
           }}>
 
             {/* Rating */}
           <View style={{alignItems: 'center'}}>
             <Text style={{...FONTS.h3, color: COLORS.white, fontWeight: 'bold'}}>{detailsData.rating}</Text>
-            <Text style={{...FONTS.body4, color: 'white'}}>Rating</Text>
+            <Text style={{...FONTS.body4}}>Rating</Text>
           </View>
           
           <LineDivider />
+
+           {/* Number of Pages */}
+           <View style={{alignItems: 'center'}}>
+            <Text style={{...FONTS.h3, color: COLORS.white, fontWeight: 'bold'}}>{detailsData.pageNo}</Text>
+            <Text style={{...FONTS.body4}}>Pages</Text>
+          </View>
+          
+          <LineDivider />
+
+           {/* Language */}
+           <View style={{alignItems: 'center'}}>
+            <Text style={{...FONTS.h3, color: COLORS.white, fontWeight: 'bold'}}>{detailsData.language}</Text>
+            <Text style={{...FONTS.body4}}>Language</Text>
+          </View>
+          
         </View>
       </View>
 
