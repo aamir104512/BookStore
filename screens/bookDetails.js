@@ -2,6 +2,14 @@ import React from "react";
 import {View, Text, Image, ImageBackground, TouchableOpacity} from 'react-native';
 import {icons, COLORS, images, SIZES, FONTS} from '../constants';
 
+const LineDivider = () => {
+  return (
+      <View style={{ width: 1, paddingVertical: 8 }}>
+          <View style={{ flex: 1, borderLeftColor: COLORS.lightGray2, borderLeftWidth: 1 }}></View>
+      </View>
+  )
+}
+
 const BookDetails = ({route, navigation}) => {
 
   const {detailsData} = route.params;
@@ -66,7 +74,7 @@ const BookDetails = ({route, navigation}) => {
         </View>
 
         {/* book cover section */}
-        <View style={{alignItems: 'center', paddingTop: 80}}>
+        <View style={{alignItems: 'center', paddingTop: 79}}>
           <Image 
           source={detailsData.bookCover}
           resizeMode = {"contain"}
@@ -85,8 +93,24 @@ const BookDetails = ({route, navigation}) => {
         </View>
 
         {/* Book Information section (rating, no of pages, language) */}
-        <View>
+        <View style={{
+          height: 50, 
+          backgroundColor: "rgba(0,0,0,0.4)", 
+          marginHorizontal: SIZES.padding, 
+          marginTop: 25, 
+          borderRadius: 10,
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexDirection: 'row'
+          }}>
 
+            {/* Rating */}
+          <View style={{alignItems: 'center'}}>
+            <Text style={{...FONTS.h3, color: COLORS.white, fontWeight: 'bold'}}>{detailsData.rating}</Text>
+            <Text style={{...FONTS.body4, color: 'white'}}>Rating</Text>
+          </View>
+          
+          <LineDivider />
         </View>
       </View>
 
