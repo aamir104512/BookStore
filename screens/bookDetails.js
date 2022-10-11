@@ -36,7 +36,7 @@ const BookDetails = ({route, navigation}) => {
         </View>
 
         {/* navigation header section */}
-        <View style={{flexDirection: 'row', alignItems: 'center', paddingHorizontal: SIZES.padding, marginTop: 20, justifyContent: 'space-between'}}>
+        <View style={{flexDirection: 'row', alignItems: 'center', paddingHorizontal: SIZES.padding, marginTop: 19, justifyContent: 'space-between'}}>
           <TouchableOpacity
           onPress={()=> navigation.goBack()}>
             <Image 
@@ -83,9 +83,13 @@ const BookDetails = ({route, navigation}) => {
           <Text style={{fontSize: 18, color: detailsData.navTintColor, fontWeight: 'bold'}}>{detailsData.bookName}</Text>
           <Text style={{...FONTS.body3, color: detailsData.navTintColor}}>{detailsData.author}</Text>
         </View>
+
+        {/* Book Information section (rating, no of pages, language) */}
+        <View>
+
+        </View>
       </View>
 
-      // Book Information section (rating, no of pages, language)
     )
   }
 
