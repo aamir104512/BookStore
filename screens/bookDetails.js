@@ -1,5 +1,6 @@
 import React from "react";
 import {View, Text, Image, ImageBackground, TouchableOpacity} from 'react-native';
+import { ScrollView } from "react-native-virtualized-view";
 import {icons, COLORS, images, SIZES, FONTS} from '../constants';
 
 const LineDivider = () => {
@@ -134,6 +135,18 @@ const BookDetails = ({route, navigation}) => {
     )
   }
 
+  function BookDescription() {
+    return(
+      <View style={{marginTop: 15}}>
+        <Text style={{fontSize: 18, color: COLORS.white, fontWeight: 'bold'}}>Description</Text>
+
+        <ScrollView style={{height: 100}}>
+          <Text>{detailsData.description}</Text>
+        </ScrollView>
+      </View>
+    )
+  }
+
 
   return(
     <View style={{flex: 1, backgroundColor: COLORS.black}}>
@@ -141,6 +154,10 @@ const BookDetails = ({route, navigation}) => {
       {/* Book information function  */}
       <View style={{flex: 0.65}}>
         {BookInfo()}
+      </View>
+
+      <View style={{paddingHorizontal: SIZES.padding, flex: 0.1}}>
+        {BookDescription()}
       </View>
     </View>
   )
