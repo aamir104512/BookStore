@@ -140,8 +140,8 @@ const BookDetails = ({route, navigation}) => {
       <View style={{marginTop: 15}}>
         <Text style={{fontSize: 18, color: COLORS.white, fontWeight: 'bold'}}>Description</Text>
 
-        <ScrollView style={{height: 100}}>
-          <Text>{detailsData.description}</Text>
+        <ScrollView style={{height: 120, marginTop: 5}}>
+          <Text style={{...FONTS.body2, color: "#727C81", fontSize: 16}}>{detailsData.description}</Text>
         </ScrollView>
       </View>
     )
