@@ -135,14 +135,38 @@ const BookDetails = ({route, navigation}) => {
     )
   }
 
+  // book description section
   function BookDescription() {
     return(
-      <View style={{marginTop: 15}}>
+      <View style={{marginTop: 15, height: 150,}}>
         <Text style={{fontSize: 18, color: COLORS.white, fontWeight: 'bold'}}>Description</Text>
 
-        <ScrollView style={{height: 120, marginTop: 5}}>
+        <ScrollView style={{ marginTop: 5}}>
           <Text style={{...FONTS.body2, color: "#727C81", fontSize: 16}}>{detailsData.description}</Text>
         </ScrollView>
+      </View>
+    )
+  }
+
+  // bottom buttons section
+  function BottomButtons() {
+    return(
+      <View style={{marginHorizontal: SIZES.padding, flexDirection: 'row', }}>
+        <TouchableOpacity style={{width: 53, height: 53, backgroundColor: COLORS.secondary, alignItems: 'center', justifyContent: 'center', borderRadius: 10}}>
+          <Image 
+          source={icons.bookmark}
+          resizeMode= {"contain"}
+          style={{
+            width: 30,
+            height: 30,
+            tintColor: COLORS.lightGray2
+          }}
+          />
+        </TouchableOpacity>
+
+        <TouchableOpacity style={{height: 53, width: 300, backgroundColor: COLORS.primary, alignItems: 'center', justifyContent: 'center', borderRadius: 10, marginLeft: 13}}>
+          <Text style={{...FONTS.h3, color: COLORS.white}}>Start Reading</Text>
+        </TouchableOpacity>
       </View>
     )
   }
@@ -152,12 +176,17 @@ const BookDetails = ({route, navigation}) => {
     <View style={{flex: 1, backgroundColor: COLORS.black}}>
 
       {/* Book information function  */}
-      <View style={{flex: 0.65}}>
+      <View style={{flex: 4}}>
         {BookInfo()}
       </View>
 
-      <View style={{paddingHorizontal: SIZES.padding, flex: 0.1}}>
+      <View style={{paddingHorizontal: SIZES.padding, flex: 1.7}}>
         {BookDescription()}
+      </View>
+
+      {/* function for bottom buttons */}
+      <View style={{bottom: 40}}>
+        {BottomButtons()}
       </View>
     </View>
   )

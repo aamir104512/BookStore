@@ -409,10 +409,23 @@ function BooksCategories() {
           }}/>
 
           {/* View for book information */}
-          <View style={{paddingLeft: SIZES.radius}}>
+          <View style={{paddingLeft: SIZES.radius, flex: 1}}>
 
             <View>
-              <Text style={{fontSize: 16, fontWeight: 'bold', color: COLORS.white}}>{item.bookName}</Text>
+              <View style= {{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+                <Text style={{fontSize: 16, fontWeight: 'bold', color: COLORS.white}}>{item.bookName}</Text>
+  
+                <Image 
+                source={icons.bookmark}
+                resizeMode = "contain"
+                style={{
+                  height: 20,
+                  width: 20,
+                  tintColor: COLORS.lightGray,
+                  // marginLeft: 75
+                }}
+                />
+              </View>
               <Text style={{...FONTS.h3, color: COLORS.lightGray}}>{item.author}</Text>
             </View>
 
@@ -497,7 +510,7 @@ function BooksCategories() {
       {buttons()}
       
       {/* book cover and information */}
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator = {false}>
         <View>
           {books()}
         </View>
