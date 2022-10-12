@@ -72,8 +72,25 @@ const bookTheTinyDragon = {
     ],
     readed: "12.4b",
     description: "This sketchbook for kids is the perfect tool to improve your drawing skills! Designed to encourage kids around the world to express their uniqueness through drawing, sketching or doodling, this sketch book is filled with 110 high quality blank pages for creations. Add some fun markers, crayons, and art supplies and you have the perfect, easy gift for kids!",
-    backgroundColor: "rgba(119,77,143,0.9)",
+    backgroundColor: "rgba(119,77,163,0.9)",
     navTintColor: "#FFF"
+}
+
+const bookUnderland = {
+  id: 4,
+  bookName: "Underland",
+  bookCover: images.underland,
+  rating: 4.9,
+  language: "Eng",
+  pageNo: "496",
+  author: "Robert Macfarlane",
+  genre: [
+      "Adventure"
+  ],
+  readed: "78.9k",
+  description: "In Underland, Robert Macfarlane delivers an epic exploration of the Earth’s underworlds as they exist in myth, literature, memory, and the land itself. Traveling through the dizzying expanse of geologic time—from prehistoric art in Norwegian sea caves, to the blue depths of the Greenland ice cap, to a deep-sunk 'hiding place' where nuclear waste will be stored for 100,000 years to come—Underland takes us on an extraordinary journey into our relationship with darkness, burial, and what lies beneath the surface of both place and mind.",
+  backgroundColor: "rgba(119,77,143,0.9)",
+  navTintColor: "#FFF"
 }
 
 const booksData = [
@@ -93,6 +110,11 @@ const booksData = [
     ...bookTheTinyDragon,
     completion: '48%',
     lastRead: '1d 2h'
+  },
+  {
+    ...bookUnderland,
+    completion: '89%',
+    lastRead: '3d 6h'
   }
 
 ]
@@ -102,14 +124,14 @@ const booksCategories = [
     id: 1,
     categoryName: 'Best Seller',
     books: [
-      bookTheTinyDragon, bookOtherWordsForHome, bookTheMetropolis, 
+      bookTheTinyDragon, bookOtherWordsForHome, bookTheMetropolis, bookUnderland 
     ]
   },
   {
     id: 2,
     categoryName: 'The Latest',
     books: [
-       bookTheTinyDragon
+       bookTheTinyDragon, bookUnderland
     ]
   },
   {
@@ -150,10 +172,11 @@ const booksCategories = [
           <TouchableOpacity
             style={{
               backgroundColor: COLORS.primary,
-              height: 40,
+              height: 35,
               paddingLeft: 3,
               paddingRight: SIZES.radius,
               borderRadius: 20,
+              width: 115
             }}
             onPress={() => console.log('Points')}>
             <View
