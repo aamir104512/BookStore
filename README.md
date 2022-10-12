@@ -10,7 +10,7 @@ The app contains the use of many react native commponents (flatlist, backgroundi
 # Screenshots
 Screenshots of the UI design are given below:
 
-<img src="https://user-images.githubusercontent.com/93657286/195278789-878ac36d-4c7b-4840-81b9-cb117ca5d96a.png" width="100" height="100">
+<img src="https://user-images.githubusercontent.com/93657286/195278789-878ac36d-4c7b-4840-81b9-cb117ca5d96a.png" width="360" height="800">
 
 ![Screenshot_20221012-121652_BookStore](https://user-images.githubusercontent.com/93657286/195278789-878ac36d-4c7b-4840-81b9-cb117ca5d96a.png)
 
