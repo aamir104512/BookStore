@@ -12,22 +12,24 @@ Screenshots of the UI design are given below:
 
 <img src="https://user-images.githubusercontent.com/93657286/195278789-878ac36d-4c7b-4840-81b9-cb117ca5d96a.png" width="240" height="534">
 
-![Screenshot_20221012-121652_BookStore](https://user-images.githubusercontent.com/93657286/195278789-878ac36d-4c7b-4840-81b9-cb117ca5d96a.png)
+
+<img src="https://user-images.githubusercontent.com/93657286/195278789-878ac36d-4c7b-4840-81b9-cb117ca5d96a.png" width="240" height="534">
 
 
-![Screenshot_20221012-121111_BookStore](https://user-images.githubusercontent.com/93657286/195278884-a2737a5e-7ec7-49e0-b704-ea0810a72621.png)
+<img src="https://user-images.githubusercontent.com/93657286/195278884-a2737a5e-7ec7-49e0-b704-ea0810a72621.png" width="240" height="534">
 
 
-![Screenshot_20221012-121748_BookStore](https://user-images.githubusercontent.com/93657286/195278976-361cdaa4-a4b4-463a-ad9d-5204d258d8be.png)
+<img src="https://user-images.githubusercontent.com/93657286/195278976-361cdaa4-a4b4-463a-ad9d-5204d258d8be.png" width="240" height="534">
 
 
-![Screenshot_20221012-121754_BookStore](https://user-images.githubusercontent.com/93657286/195279158-cce1dbab-ded9-434c-aa13-ffbfec577353.png)
+<img src="https://user-images.githubusercontent.com/93657286/195279158-cce1dbab-ded9-434c-aa13-ffbfec577353.png" width="240" height="534">
 
 
-![Screenshot_20221012-121802_BookStore](https://user-images.githubusercontent.com/93657286/195279293-2c781b91-c070-4c24-8d4c-b4c205bdf371.png)
+<img src="https://user-images.githubusercontent.com/93657286/195279293-2c781b91-c070-4c24-8d4c-b4c205bdf371.png" width="240" height="534">
 
 
-![Screenshot_20221012-121808_BookStore](https://user-images.githubusercontent.com/93657286/195279565-fc984e72-c984-4e8d-a1d7-f98bd6893420.png)
+<img src="https://user-images.githubusercontent.com/93657286/195279565-fc984e72-c984-4e8d-a1d7-f98bd6893420.png" width="240" height="534">
 
 
-![Screenshot_20221012-121721_BookStore](https://user-images.githubusercontent.com/93657286/195279639-10d5c076-a3d9-4d17-ba51-db49c0fb534f.png)
+<img src="https://user-images.githubusercontent.com/93657286/195279639-10d5c076-a3d9-4d17-ba51-db49c0fb534f.png" width="240" height="534">
+
